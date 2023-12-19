@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  --blue-500: #3b82f6;
+  --lightest-blue-500: #fafcff;
+  overflow-y: scroll;
+}
+
+.app-markdown *,
+.app-markdown ::after,
+.app-markdown ::before {
+  all: revert;
+}
+
+.bg-lightest-blue {
+  background-color: var(--lightest-blue-500);
+}
+
+.user-box {
+  position: relative;
+  border-radius: 8px;
+}
+
+.user-box::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-left: 2px solid var(--blue-500);
+  border-right: 2px solid var(--blue-500);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.app-tab {
+  position: relative;
+}
+
+.app-tab::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom-color 0.2s ease-in-out;
+}
+
+.active-tab {
+  font-weight: bold;
+}
+
+.active-tab::after {
+  border-bottom-color: var(--blue-500);
+}
+
+/* override flowbite css that puts box shadow on a focused text area*/
+.no-shadow {
+  box-shadow: none !important;
+}
+
+/* prevent scrollbar flicker on google chrome */
+.infinite-scroll-wrapper .infinite-scroll-component {
+  overflow-y: hidden !important;
+}
+
+/* BANNER LOGO */
+
+.gg-scale-logo {
+  --ggs:1.825;
+}
+
+.gg-twitter {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 20px;
+  height: 20px
+}
+.gg-twitter::after,
+.gg-twitter::before {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  left: 4px
+}
+.gg-twitter::before {
+  width: 9px;
+  height: 14px;
+  border-left: 4px solid;
+  border-bottom: 4px solid;
+  border-bottom-left-radius: 6px;
+  background:
+      linear-gradient(
+          to left,currentColor 12px,transparent 0)
+          no-repeat center 2px/10px 4px;
+  top: 4px
+}
+.gg-twitter::after {
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  border-radius: 20px;
+  top: 2px;
+  box-shadow: 7px 4px 0,7px 12px 0
+}
