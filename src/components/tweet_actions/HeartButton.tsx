@@ -2,7 +2,6 @@ import { useSession } from "next-auth/react";
 import { RoundIconHover } from "../shared/RoundIconHover";
 import { VscHeart, VscHeartFilled } from "react-icons/vsc";
 import type { MouseEventHandler } from "react";
-import { Tooltip } from "flowbite-react";
 
 type HeartButtonProps = {
   onClick: MouseEventHandler<HTMLButtonElement>;

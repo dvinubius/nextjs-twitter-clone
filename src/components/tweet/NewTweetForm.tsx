@@ -6,7 +6,6 @@ import {
   useRef,
   useState,
 } from "react";
-import { toast } from 'react-hot-toast';
 
 import { api } from "~/utils/api";
 import { Button } from "../shared/Button";
@@ -14,7 +13,6 @@ import { ProfileImage } from "../shared/ProfileImage";
 import { MAX_TWEET_LENGTH } from "~/config/constants";
 import { updateTextAreaSize } from "../utils/layout-helpers";
 import { useRouter } from "next/router";
-import { updateFeeds } from "../utils/update-helpers";
 import { createTweet, replyToTweet } from "./updates";
 
 export function NewTweetForm({classes='', replyForId, onTweetSuccess}: {classes?: string, replyForId?: string, onTweetSuccess?: () => void}) {
