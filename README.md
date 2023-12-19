@@ -22,54 +22,54 @@ The initial project demonstrates a few basic tRPC and Next features.
 ---
 
 ## 1 Auth
-- ✅ add google sign-in
+- [x] add google sign-in
 
 ## 2 UI Refinements
 
-- ✅ fix infinite-list displacement (scrollbar)
+- [x] fix infinite-list displacement (scrollbar)
 
 ### 2.1 Sidenav
-- ✅ auth button (to login/logout)
+- [x] auth button (to login/logout)
   - separate in layout
   - current user
   - tooltip for actual action
-- ✅ border for the sidenav
-- ✅ button width full (better alignment)
-- ✅ highlight currently active section
-- ✅ bg
+- [x] border for the sidenav
+- [x] button width full (better alignment)
+- [x] highlight currently active section
+- [x] bg
   
 ### 2.2 New Tweet Form
-- ✅ move above tabs 
-- ✅ alignment of picture with input
-- ✅ button on same row - more compact
-- ✅ non-white bg for better visibility
-- ✅ character count
-- ✅ smaller text
-- ✅ prevent empty tweet
+- [x] move above tabs 
+- [x] alignment of picture with input
+- [x] button on same row - more compact
+- [x] non-white bg for better visibility
+- [x] character count
+- [x] smaller text
+- [x] prevent empty tweet
 
 ### 2.3 Responsive
-- ✅ tweets not too wide
-- ✅ tweet form not too wide
-- ✅ profile banner not too wide
+- [x] tweets not too wide
+- [x] tweet form not too wide
+- [x] profile banner not too wide
 
 ### 2.4 Tabs
-- ✅ active tab underline doesn't displace text
-- ✅ tabs keep equal widths when active tab changes (bold text doesn't affect tab width)
-- ✅ underline color transitions 
+- [x] active tab underline doesn't displace text
+- [x] tabs keep equal widths when active tab changes (bold text doesn't affect tab width)
+- [x] underline color transitions 
 
 ### 2.5 Misc
-- ✅ twitter logo as pure css icon
-- ✅ user profile header
+- [x] twitter logo as pure css icon
+- [x] user profile header
   - taller
   - non-white bg for better visibility
-- ✅ spinner position on page while loading tweets
-- ✅ back arrow on profile makes no sense
+- [x] spinner position on page while loading tweets
+- [x] back arrow on profile makes no sense
 
-- ✅ navigation
+- [x] navigation
   - protect profile page
 
 ## 3 Add *Liked Tweets* tab
-- ✅ on profile page, display liked tweets (becomes a 2-tab-page)
+- [x] on profile page, display liked tweets (becomes a 2-tab-page)
 
 ## 4 Add *Echo* Feature
 Echo is like reposting, with nothing added. It helps users who follow the echoer be fed with the echoed tweet, even if they don't follow the original author.
@@ -87,20 +87,20 @@ Echo is like reposting, with nothing added. It helps users who follow the echoer
 
 ### 4.2 Implementation
 #### Back End
-  - ✅ schema update w/ selfrelation
-  - ✅ tweet recency by lastPostedAt field
-  - ✅ query for echoed tweets
-  - ✅ echoer information included in tweet 
-  - ✅ echo mutation: create => update echo count, echoedByMe
-  - ✅ query tweets: recency based on creation & existing echoes
-  - ✅ echoers are sorted: most recent first
-  - ✅ limit how many echoers are provided to a tweet
+  - [x] schema update w/ selfrelation
+  - [x] tweet recency by lastPostedAt field
+  - [x] query for echoed tweets
+  - [x] echoer information included in tweet 
+  - [x] echo mutation: create => update echo count, echoedByMe
+  - [x] query tweets: recency based on creation & existing echoes
+  - [x] echoers are sorted: most recent first
+  - [x] limit how many echoers are provided to a tweet
 #### Front End
-  - ✅ echo action & echoed-stats
-  - ✅ profile page tab: echoes
+  - [x] echo action & echoed-stats
+  - [x] profile page tab: echoes
     - cannot echo my own
     - cannot re-echo
-  - ✅ echoed tweet cards display echoers
+  - [x] echoed tweet cards display echoers
     - max. 2 are previewed, the others are are "... + x more"
 
 
@@ -112,14 +112,14 @@ Show interactable tweet along with
 Tweet page has meta tags for SEO (opengraph)
 
 ### Implementation
-- ✅ (BE) get data for 1 tweet
-- ✅ tweet page on dynamic route with interactable tweet
-- ✅ access tweet page: link surface on tweet
-- ✅ quoters
+- [x] (BE) get data for 1 tweet
+- [x] tweet page on dynamic route with interactable tweet
+- [x] access tweet page: link surface on tweet
+- [x] quoters
 
 ## 6 Consistent Navigation & Titles
-- ✅ back navigation & Title for tweet page
-- ✅ back navigation & Title for profile page
+- [x] back navigation & Title for tweet page
+- [x] back navigation & Title for profile page
 
 ## 7 Add *Reply* Feature
 Reply is like creating a new tweet while quoting. The purpose is for you to engage with the author while both your followers and the author's followers will see your reply in their feed.
@@ -136,19 +136,19 @@ Reply is like creating a new tweet while quoting. The purpose is for you to enga
   - simple UI: in feed, no preview of the replies list
 
 ### 7.2 Implementation
-- ✅ BE: replyParent type definition
+- [x] BE: replyParent type definition
 - FE: quoted tweet in tweet
-  - ✅ display inside the tweet, except for the reply tweets on the tweet page
-  - ✅ link to its page
+  - [x] display inside the tweet, except for the reply tweets on the tweet page
+  - [x] link to its page
 - FE: reply forms
-  - ✅ tweet page
-  - ✅ tweet reply modal
+  - [x] tweet page
+  - [x] tweet reply modal
 
 ## 8 Add *About/FAQ Page*
 
-  - ✅ reply: can multiple times, can to my own
-  - ✅ cannot echo my own and my echoed
-  - ✅ links to github: original project, this repo
+  - [x] reply: can multiple times, can to my own
+  - [x] cannot echo my own and my echoed
+  - [x] links to github: original project, this repo
 
 ## 9 Add *Edit User Profile* capability
 - + FEATURE: Edit User Profile
@@ -157,23 +157,23 @@ Reply is like creating a new tweet while quoting. The purpose is for you to enga
   - on profile picture update, intentionally not updating user avatar in already displayed tweets, but only on subsequent data fetching
   
 ### Implementation
-  - ✅ user can set profile image
-  - ✅ user automaticallly has a handle and can update it
-    - ✅ need a trigger to store initial handle as email or a slug (on user signup with oauth2)
-    - ✅ no trigger can run on planetscale -> use supabase + postgres instead
-    - ✅ create trigger in db, save the code used in a project file for reference
-    - ✅ handle update -> duplication handling
-  - ✅ user has profile banner and can update it
-    - ✅ placeholder before user sets it
-  - ✅ user has bio and can edit it
-    - ✅ textarea with used characters display
-  - ✅ display "joined ... " info on profile page'
-  - ✅ user info in sidenav taken from trpc call (update sidenav via query invalidation on profile info update)
+  - [x] user can set profile image
+  - [x] user automaticallly has a handle and can update it
+    - [x] need a trigger to store initial handle as email or a slug (on user signup with oauth2)
+    - [x] no trigger can run on planetscale -> use supabase + postgres instead
+    - [x] create trigger in db, save the code used in a project file for reference
+    - [x] handle update -> duplication handling
+  - [x] user has profile banner and can update it
+    - [x] placeholder before user sets it
+  - [x] user has bio and can edit it
+    - [x] textarea with used characters display
+  - [x] display "joined ... " info on profile page'
+  - [x] user info in sidenav taken from trpc call (update sidenav via query invalidation on profile info update)
   
 ## 10 User Feedback
 
-- ✅ Successful updates
-- ✅ Failed updates of UI
+- [x] Successful updates
+- [x] Failed updates of UI
   - infinite data
   - tweet on tweet page
   - profile on profile page
@@ -181,14 +181,14 @@ Reply is like creating a new tweet while quoting. The purpose is for you to enga
 
 ## 11 Final Touches
 
-- ✅ profile page, edit modal - skeleton for photo 
-- ✅ tooltips on icons
-- ✅ update user avatar in NewTweetForm upon profile update?
-- ✅ flicker on infinite scroll
-- ✅ new tweet form to adjust height when tweet is multiple lines long
+- [x] profile page, edit modal - skeleton for photo 
+- [x] tooltips on icons
+- [x] update user avatar in NewTweetForm upon profile update?
+- [x] flicker on infinite scroll
+- [x] new tweet form to adjust height when tweet is multiple lines long
   
-- ✅ refactor trpc logic - DRY
-- ✅ refactor components - DRY & extract complex handlers (tweet card updates etc)
+- [x] refactor trpc logic - DRY
+- [x] refactor components - DRY & extract complex handlers (tweet card updates etc)
 
 
 # Takeaways 🤔 🧐 📝
