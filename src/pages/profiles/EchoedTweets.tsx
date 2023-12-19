@@ -1,7 +1,7 @@
 import { InfiniteTweetList } from "~/components/tweet/InfiniteTweetList";
 import { api } from "~/utils/api";
 
-export function EchoedTweets({id}: {id: string}) {
+export default function EchoedTweets({id}: {id: string}) {
   const tweets = api.tweet.infiniteEchoedFeed.useInfiniteQuery(
     { userId: id },
     { getNextPageParam: (lastPage) => lastPage.nextCursor }

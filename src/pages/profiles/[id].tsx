@@ -19,9 +19,9 @@ import { EditProfileButton } from "~/components/user-profile/EditProfileButton";
 import { FollowButton } from "~/components/tweet_actions/FollowButton";
 import { EditProfileModal } from "~/components/user-profile/EditProfileModal";
 import { Banner } from "~/components/user-profile/Banner";
-import { AuthoredTweets } from "./AuthoredTweets";
-import { EchoedTweets } from "./EchoedTweets";
-import { LikedTweets } from "./LikedTweets";
+import AuthoredTweets from "./AuthoredTweets";
+import EchoedTweets from "./EchoedTweets";
+import LikedTweets from "./LikedTweets";
 
 const TABS = ["Tweeted", "Echoed", "Liked"] as const;
 
