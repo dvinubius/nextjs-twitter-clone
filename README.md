@@ -6,7 +6,10 @@ Built with the T3-stack, using Next.js pages directory.
 
 The initial project demonstrates a few basic tRPC and Next features. 
 
-This current project **adds some features, UI polish and architecture improvements**. 
+✅ This project **adds some features, as well as UI & architecture improvements**. 
+📝 Additionally, it **documents** the steps of **the development**  (see the section below).
+
+### Try the app ⚡️ [**here**](https://nextjs-twitter-clone-dvinubius.vercel.app/) ⚡️
 
 # Enhancements and New Features 🤓💡🤩
 
