@@ -213,4 +213,4 @@ The utils for updating infinite list data on the front end do not consistently b
 # To improve 🚧 🛠️ 🧨
 - echoers sorted by most recent echoer, not necessarily so that my own followed people come first -> would be a nice challenge for a real app
 - some typescript & linter disabling or workarounds due to imperfect type support from trpc / cloudinary
-- more efficient query invalidation & a better ux by storing the selected tab / infinite feed in the route (all vs following, tweeted vs echoed vs liked)
+- more efficient query invalidation & a better ux by storing the selected tab / infinite feed in the route (all vs following, tweeted vs echoed vs liked )
